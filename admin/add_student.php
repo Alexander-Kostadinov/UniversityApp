@@ -39,7 +39,7 @@ if($_SESSION['user'] !== $username){header("Location:index.php");}
 						else{echo '<p class="red14"><strong>Попълнете задължителните полета!</strong></p>';}	
 					?>
 				</div>
-    			<p id="list" align="center" style="margin-top: 30px;">
+    			<p class="list-btn" align="center" style="margin-top: 30px;">
 					<a href="students.php">Списък студенти</a>
 				</p>
     			<div align="center">
