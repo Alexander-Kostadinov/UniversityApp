@@ -49,10 +49,10 @@ include_once "config.php";
 
     <h3>Студенти от ПМФ</h3>
 
-    <div id="add-teacher" align="center">
-            <a href="add_student.php">
-                <strong>Добавяне на нов студент</strong>
-            </a>
+    <div align="center">
+        <a href="add_student.php">
+            <strong>Добавяне на нов студент</strong>
+        </a>
     </div>
 
     <div class="form-container">

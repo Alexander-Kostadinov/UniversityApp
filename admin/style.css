@@ -20,16 +20,22 @@ h3 {
 	color: #010509;
 }
 
+#list a {
+	font-size: 1.2rem;
+}
+
 .logout {
 	text-align: center;
 	margin-bottom: 20px;
 }
 
+#list a,
 .logout a {
 	color: #4f4f50;
 	text-decoration: none;
 }
 
+#list a:hover,
 .logout a:hover {
 	text-decoration: underline;
 }
@@ -70,6 +76,8 @@ form {
 	gap: 10px;
 }
 
+#add-btn,
+#cancel-btn,
 form input, form select {
 	padding: 8px;
 	border: 1px solid #ccc;
@@ -77,6 +85,7 @@ form input, form select {
 	font-size: 14px;
 }
 
+#add-btn,
 form input[type="submit"] {
 	background-color: #4CAF50;
 	color: white;
@@ -85,8 +94,17 @@ form input[type="submit"] {
 	margin-right: 20px;
 }
 
+#cancel-btn {
+	cursor: pointer;
+}
+
+#add-btn:hover,
 form input[type="submit"]:hover {
 	background-color: #1e5120;
+}
+
+#cancel-btn:hover {
+	background-color: #ccc;
 }
 
 .form-container form {
