@@ -15,14 +15,11 @@ include_once "config.php";
 <body>
 	<h3 align="center">Преподаватели в ПМФ</h3>
 	<?php include_once "links.htm"; ?>
-	<table border="1" align="center">	
-	<tr>
-		<td colspan="5">
-			<form name="form_course" action="teachers.php" method="get">
-				<label for="courses">Избери дисциплина:</label>
-				<select name="courses" id="courses">
-				   <option value="0">Всички</option>
-				   <?php
+	<form name="form_course" action="teachers.php" method="get" align="center">
+		<label for="courses">Избери дисциплина:</label>
+		<select name="courses" id="courses">
+			<option value="0">Всички</option>
+				<?php
 					$result_courses=mysqli_query($connection,"select * from courses");
 				    while($row_course=mysqli_fetch_array($result_courses))
 				    {
@@ -31,12 +28,11 @@ include_once "config.php";
 						{echo ' selected>'.$row_course['name'].'</option>';}
 						else {echo '>'.$row_course['name'].'</option>';}
 				    }
-				  ?>
-				</select>
-				<input type="submit" value="сортирай">
-			</form>
-		</td>
-	</tr>
+				?>
+		</select>
+		<input type="submit" value="сортирай">
+	</form>
+	<table border="1" align="center">
 	<tr>
 		<th>ID</th>
 		<th>Име</th>
