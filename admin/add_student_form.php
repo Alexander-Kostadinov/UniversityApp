@@ -104,7 +104,6 @@
 </table>
 	<input class="add-btn" type="button" value="Добави" class="button" onClick="validate_form()"
 		style="margin-top: 20px; font-size: 16px;">
-	<input class="cancel-btn" type="reset" value="Отказ" class="button" style="margin-top: 20px; font-size: 16px;">
 </body>
 </html>
 
