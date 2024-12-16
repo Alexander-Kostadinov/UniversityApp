@@ -1,7 +1,5 @@
-﻿<?php										
-//session_start();
+﻿<?php
 if (!isset($_SESSION)) { 
-  // no session has been started yet
   session_start(); 
 }
 include_once "config.php";
@@ -20,24 +18,21 @@ if (isset($_GET['id']))
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<table align="center" cellpadding="0" cellspacing="0" width="400">
+<table align="center" cellpadding="0" cellspacing="0" width="400" style="margin-top: 5px;">
 
 <form action="edit_course.php" method="post">
 	<tr>
-		<td height="30" colspan="2"><p align="center" class="red14"><strong>Редактиране на дисциплина</strong></p>
+		<td height="30" colspan="2"><p align="center"><strong>Редактиране на дисциплина</strong></p>
 		<input type="hidden" name="id" value="<?php echo $row['id']; ?>" size=40 class="field">
 		</td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Име *</p></td>
+		<td height="30"><p align="center">Име *</p></td>
 		<td><input type=text name="name" value="<?php echo $row['name']; ?>" size=40 class="field"></td>
 	</tr>
-
-	<tr>
-		<td height="30" align="center" colspan="2">
-		<input type="submit" value="Редактиране" class="button"> </td>
-	</tr>
-</form></table>
+</form>
+</table>
+	<input class="edit-btn" type="submit" value="Редактиране" class="button" style="margin-top: 20px; font-size: 16px;">
 </body>
 </html>
 

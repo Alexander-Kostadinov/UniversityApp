@@ -1,7 +1,5 @@
-﻿<?php										
-//session_start();
+﻿<?php
 if (!isset($_SESSION)) { 
-  // no session has been started yet
   session_start(); 
 }
 include_once "config.php";
@@ -14,35 +12,37 @@ if (isset($_GET['id']))
 }
 ?>
 
+<!DOCTYPE html>
+
 <html>
 <head><title>Редактиране на студент</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<table align="center" cellpadding="0" cellspacing="0" width="400">
+<table align="center" cellpadding="0" cellspacing="0" width="400" style="margin-top: 5px;">
 
 <form action="edit_teacher.php" method="post">
 	<tr>
-		<td height="30" colspan="2"><p align="center" class="red14"><strong>Редактиране на преподавател</strong></p>
+		<td height="30" colspan="2"><p align="center"><strong>Редактиране на преподавател</strong></p>
 		<input type="hidden" name="id" value="<?php echo $row['id']; ?>" size=40 class="field">
 		</td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Име *</p></td>
+		<td height="30"><p align="center">Име *</p></td>
 		<td><input type=text name="fname" value="<?php echo $row['fname']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Презиме</td>
+		<td height="30"><p align="center">Презиме</td>
 		<td><input type=text name="mname" value="<?php echo $row['mname']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Фамилия *</td>
+		<td height="30"><p align="center">Фамилия *</td>
 		<td><input type=text name="lname" value="<?php echo $row['lname']; ?>" size=40 class="field"></td>
 	</tr>
 	
 	<tr>
-		<td height="30"><p align="left" class="black14">Избираема дисциплина:</td>
+		<td height="30"><p align="center">Избираема дисциплина:</td>
 		<td><select name="course_id" class="field">
 		   <?php
 		   $result_courses=@mysqli_query($connection,"SELECT * FROM courses");
@@ -57,11 +57,9 @@ if (isset($_GET['id']))
 		</select>
 		</td>
 	</tr>
-	<tr>
-		<td height="30" align="center" colspan="2">
-		<input type="submit" value="Редактиране" class="button"> </td>
-	</tr>
-</form></table>
+</form>
+</table>
+	<input class="edit-btn" type="submit" value="Редактиране" class="button" style="margin-top: 20px; font-size: 16px;">
 </body>
 </html>
 

@@ -77,6 +77,7 @@ form {
 }
 
 .add-btn,
+.edit-btn,
 .cancel-btn,
 form input, form select {
 	padding: 8px;
@@ -86,6 +87,7 @@ form input, form select {
 }
 
 .add-btn,
+.edit-btn,
 form input[type="submit"] {
 	background-color: #4CAF50;
 	color: white;
@@ -99,6 +101,7 @@ form input[type="submit"] {
 }
 
 .add-btn:hover,
+.edit-btn:hover,
 form input[type="submit"]:hover {
 	background-color: #1e5120;
 }

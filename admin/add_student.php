@@ -40,7 +40,7 @@ if($_SESSION['user'] !== $username){header("Location:index.php");}
 					?>
 				</div>
     			<p class="list-btn" align="center" style="margin-top: 30px;">
-					<a href="students.php">Списък студенти</a>
+					<a href="students.php">Списък със студенти</a>
 				</p>
     			<div align="center">
 					<?php 

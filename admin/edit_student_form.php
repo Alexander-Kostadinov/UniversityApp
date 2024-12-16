@@ -1,7 +1,5 @@
-﻿<?php										
-//session_start();
+﻿<?php
 if (!isset($_SESSION)) { 
-  // no session has been started yet
   session_start(); 
 }
 include_once "config.php";
@@ -20,7 +18,7 @@ if (isset($_GET['id']))
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<table align="center" cellpadding="0" cellspacing="0" width="400">
+<table align="center" cellpadding="0" cellspacing="0" width="400" style="margin-top: 5px;">
 
 <form action="edit_student.php" method="post">
 	<tr>
@@ -29,23 +27,23 @@ if (isset($_GET['id']))
 		</td>
 	</tr>
 	<tr>
-		<td height="30" width="200"><p align="left" class="black14">Факултетен номер</p></td>
+		<td height="30" width="200"><p align="center">Факултетен номер</p></td>
 		<td><input type=text name="fnum" value="<?php echo $row['fnum']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Име *</p></td>
+		<td height="30"><p align="center">Име *</p></td>
 		<td><input type=text name="fname" value="<?php echo $row['fname']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Презиме</td>
+		<td height="30"><p align="center">Презиме</td>
 		<td><input type=text name="mname" value="<?php echo $row['mname']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Фамилия *</td>
+		<td height="30"><p align="center">Фамилия *</td>
 		<td><input type=text name="lname" value="<?php echo $row['lname']; ?>" size=40 class="field"></td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Kурс</td>
+		<td height="30"><p align="center">Kурс</td>
 		<td><select name="course" class="field">
 				<?php
 				for($i=1; $i<=4; $i++)
@@ -61,7 +59,7 @@ if (isset($_GET['id']))
 		</td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Лаб.група</td>
+		<td height="30"><p align="center">Лаб.група</td>
 		<td><select name="lgroup" class="field">
 				<?php
 				for($i=1; $i<=4; $i++)
@@ -77,7 +75,7 @@ if (isset($_GET['id']))
 		</td>
 	</tr>
 	<tr>
-		<td height="30"><p align="left" class="black14">Избираема дисциплина:</td>
+		<td height="30"><p align="center">Избираема дисциплина:</td>
 		<td><select name="course_id" class="field">
 		   <?php
 		   $result_courses=@mysqli_query($connection,"SELECT * FROM courses");
@@ -92,11 +90,9 @@ if (isset($_GET['id']))
 		</select>
 		</td>
 	</tr>
-	<tr>
-		<td height="30" align="center" colspan="2">
-		<input type="submit" value="Редактиране" class="button"> </td>
-	</tr>
-</form></table>
+</form>
+</table>
+	<input class="edit-btn" type="submit" value="Редактиране" class="button" style="margin-top: 20px; font-size: 16px;">
 </body>
 </html>
 
